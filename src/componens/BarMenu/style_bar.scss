@@ -1,0 +1,59 @@
+@import 'value';
+
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url(../Lato/Lato-Light.ttf);
+}
+.menu-active {
+  position: absolute;
+  width: 232px;
+  height: 634px;
+  padding: 32px 74px 32px 32px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  top: 75px;
+  right: 850px;
+  z-index: 5;
+  &__h1 {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 24px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+}
+.menu-active button {
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: red;
+  font-weight: 900;
+}
+.hidden {
+  display: none;
+}
+.headline {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: regular;
+}
+.headline h2 {
+  color: $countBackground;
+  font-weight: regular;
+  font-size: 14px;
+  margin-bottom: 11px;
+}
+.headline p {
+  font-weight: regular;
+  font-size: 14px;
+  color: $colorForParagraph;
+  margin-bottom: 14px;
+  gap: 11px;
+  margin-left: 15px;
+}

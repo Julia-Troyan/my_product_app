@@ -1,0 +1,475 @@
+@import 'value';
+
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url(../Lato/Lato-Light.ttf);
+}
+* {
+  margin: 0 auto;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.header {
+  max-width: $widthSite;
+  margin: 0 auto;
+  &__count {
+    border-radius: 100px;
+    background-color: $countBackground;
+    width: 19px;
+    height: 19px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    left: 1351px;
+    top: 18px;
+    right: 249px;
+  }
+}
+.header__count {
+  width: 19px;
+ height: 19px;
+  top: 0;
+  left: 20px;
+ 
+}
+.topNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $headerBackground;
+  width: 100%;
+  height: 75px;
+}
+.topNav-left {
+  margin-left: 291px;
+}
+.btn_a {
+  border: none;
+  background-color: transparent;
+  padding: 41px;
+  cursor: pointer;
+}
+.topNav-right {
+  display: flex;
+  justify-content: flex-end;
+  gap: 22px;
+}
+.btn_a1 {
+  border: none !important;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+}
+.main {
+  max-width: $widthSite;
+  margin: 0 auto;
+}
+.topNav-content {
+  display: flex;
+  background-color: rgb(241, 228, 230);
+  position: relative;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+    
+}
+.topNavContent {
+display: flex;
+  &__h3 {
+    color: $countBackground;
+    font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  top: 134px;
+  left: 230px;
+  }
+}
+.topContent {
+  margin-left: 64px;
+  width: $widthSite;
+  height: 148px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 16px;
+  &__header {
+    margin-left: 230px;
+    color: $countBackground;
+  }
+  &__navigation {
+    margin-right: 230px;
+    color: $colorForHeader;
+  }
+  &__navMax {
+    color: $countBackground;
+  }
+}
+.title {
+  width: 405px;
+  height: 93px;
+  &__h1 {
+  font-weight: 900px;
+  font-size: 48px;
+  color: #222;
+  font-weight: bold;
+  margin-left: 14px;
+  }
+  &__flex-row {
+    display: inline;
+    font-weight: 700;
+    font-size: 32px;
+    color: #222;
+    margin-left: 14px;
+  }
+  &__topColor {
+  font-weight: 700;
+  font-size: 32px;
+  display: inline;
+  color: $countBackground;
+  margin-left: 14px;
+  }
+}
+.menu-active {
+  position: absolute;
+  width: 232px;
+  height: 634px;
+  padding: 32px 74px 32px 32px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  top: 0px;
+  right: 0px;
+  z-index: 5;
+  &__h1 {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 24px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
+}
+.menu-active button {
+  border: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.hidden {
+  display: none;
+}
+.headline {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: regular;
+}
+.headline h2 {
+  color: $countBackground;
+  font-weight: regular;
+  font-size: 14px;
+  margin-bottom: 11px;
+}
+.headline p {
+  font-weight: regular;
+  font-size: 14px;
+  color: $colorForParagraph;
+  margin-bottom: 14px;
+  gap: 11px;
+  margin-left: 15px;
+}
+.mediumContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 453px;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  max-width: $widthSite;
+  background-color: rgba(247, 247, 247, 1);
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  &__switch button {
+  border: none;
+  cursor: pointer;
+  }
+  &__switch svg path:hover {
+  fill: $countBackground;
+  }
+}
+
+.button-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 48px;
+  margin-top: 48px;
+}
+.line {
+  background-color: #ffffff;
+  border: none;
+}
+.line a{
+  color: $colorForParagraph;
+}
+.line svg {
+ margin-left: 9px;
+}
+.line svg {
+  fill: $countBackground;
+}
+.basket {
+  width: 212px;
+  height: 48px;
+  border: 1px solid $countBackground;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: $countBackground;
+  font-size: 16px;
+  font-weight: 400;
+  &__img {
+  margin: 0;
+}
+}
+.cost{
+  margin-bottom: 64px;
+  border: none;
+  border-bottom: 1px solid $colorForParagraph;
+  background-color: #ffffff;
+  width: 642px;
+  cursor: pointer;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 128px;
+  margin-top: 128px;
+}
+.card {
+  max-width: 360px;
+  height: 581px;
+  
+&__text {
+  width: 100%;
+  height: 166px;
+  background: $backgroundCard;
+  margin: 0;
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+}
+
+.text a {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 13px;
+  color: $colorForText;
+  margin: 0;
+}
+
+.text p {
+  font-weight: 300;
+  font-size: 14px;
+  color: $colorForParagraph;
+  margin: 16px 0 0 0;
+}
+
+.text h4 {
+  font-weight: 400;
+  font-size: 16px;
+  color: $countBackground;
+  margin: 16px 0 0 0;
+}
+.email-content {
+  max-width: $widthSite;
+  position: relative;
+  margin-left: -230px;
+  &__container {
+    margin: 0 auto;
+    max-width: $widthSite;
+    opacity: 70%;
+    z-index: 1;
+    
+  }
+  &__img {
+    max-width: $widthSite;
+    height: 100%;
+  }
+  &__overlap {
+    max-width: $widthSite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(33, 22, 22, 0.7);
+    opacity: 70%;
+    z-index: 1;
+}
+}
+
+.email-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;;
+  align-items: center;
+  z-index: 2;
+ 
+}
+.email_face {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 360px;
+  height: 225px;
+  margin-left: 230px;
+}
+.block-p {
+ display: inline;
+ text-align: center;
+}
+.email_face p{
+  font-size: 20px;
+  font-weight: initial;
+  text-align: center;
+  display: inline;
+}
+.p1 {
+  font-weight: regular;
+  font-style: italic;
+  display: inline;
+}
+
+.email-block {
+  width: 557px;
+  height: 142px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-left: 232px;
+}
+.email-block h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: $backgroundFooter;
+  margin-bottom: 10px;
+}
+.email-block p {
+  font-size: 18px;
+  font-weight: inherit;
+  color: $backgroundFooter;
+  margin-bottom: 32px;
+}
+.email-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.form {
+  display: flex;
+  width: 100%;
+  width: 356px;
+  height: 49px;
+}
+
+.form input {
+  flex: 1;
+  border-radius: 20px 0 0 20px;
+  padding: 7px 64px 6px 22px;
+  border: none;
+  background-color: rgba(225, 225, 225, 1);
+  border-right: none;
+  text-align: left;
+  font-size: 14px;
+  font-weight: regular;
+}
+
+.form button {
+  border-radius: 0 20px 20px 0;
+  padding: 7px 7px 6px 8px;
+  border: 1px solid #ccc;
+  background-color: $countBackground;
+  color: white;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: white;
+  color: $countBackground;
+}
+footer {
+  width: $widthSite;
+  margin-left: -230px;
+}
+.end {
+  height: 79px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: rgba(34, 34, 36, 1);
+  align-items: center;
+
+}
+.end p {
+  font-size: 16px;
+  font-weight: regular;
+  color: rgba(251, 251, 251, 1);
+  margin-left: 235px;
+}
+.btn-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 8px;
+  margin-left: 532px;
+  margin-right: 230px;
+}
+.btn-foot {
+  width: 32px;
+  height: 32px;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+.btn-foot:hover {
+  background-color: $countBackground;
+}
+.btn-foot:hover svg path{
+  fill: rgb(247, 245, 245);
+}
