@@ -1,0 +1,108 @@
+@import 'value';
+
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url(../Lato/Lato-Light.ttf);
+}
+* {
+  margin: 0 auto;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+.cards__min {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  overflow: hidden;
+  width: 360px;
+  height: 587px;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  height: 420px;
+}
+
+.background-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.shadow img {
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+}
+
+.shadow button {
+  background-color: #f16d7f00;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  position: absolute;
+  font-weight: regular;
+}
+
+.shadow button img {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.card_min:hover .shadow {
+  opacity: 1;
+}
+
+.text {
+  width: 100%;
+  height: 166px;
+  background: #eeebeb;
+  margin: 0;
+  padding: 24px 16px;
+  box-sizing: border-box;
+}
+
+.text h2 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 13px;
+  color: #000;
+  margin: 0;
+}
+
+.text p {
+  font-weight: 300;
+  font-size: 14px;
+  color: #5d5d5d;
+  margin: 16px 0 0 0;
+}
+
+.text h4 {
+  font-weight: 400;
+  font-size: 16px;
+  color: #f16d7f;
+  margin: 16px 0 0 0;
+}
