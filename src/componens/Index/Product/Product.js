@@ -1,5 +1,6 @@
 import React from "react";
 import "./style_product.scss";
+import BacIcon from "../Image/BacIcon";
 
 const Product = ({ imageUrl, shadowImageUrl, price, title, description }) => {
   
@@ -12,8 +13,8 @@ const Product = ({ imageUrl, shadowImageUrl, price, title, description }) => {
           <img className="background-img" src={imageUrl} alt={title} />
           <div className="shadow">
             <img src={shadowImageUrl}/>
-            <button>
-              {/* <img src="" alt="" /> Add to Cart */}
+            <button className="product__add">
+              <BacIcon />Add to Cart
             </button>
           </div>
         </div>

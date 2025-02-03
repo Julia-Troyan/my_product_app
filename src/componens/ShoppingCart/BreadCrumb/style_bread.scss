@@ -1,0 +1,44 @@
+@import 'value';
+
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url(../../Index/InfoContent/Lato/Lato-Light.ttf);
+}
+* {
+  margin: 0 auto;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.top-head {
+  background: rgba(248, 243, 244, 1);
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__heading {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: $colorSelectSite;
+}
+}
+.breadcrumbs__link {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 17px;
+  color: #636363;
+}
+.breadcrumbs__link-site {
+  font-weight: 700;
+  color: $colorSelectSite;
+}

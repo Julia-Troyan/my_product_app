@@ -1,8 +1,8 @@
 import React from "react";
-import "./style_info.scss";
 import CarIcon from "../Image/CarIcon";
-import SalesIcon from "../Image/SalesIcon";
 import Icon from "../Image/Icon";
+import SalesIcon from "../Image/SalesIcon";
+import "./style_info.scss";
 
 const InfoContent = () => {
   return (

@@ -1,5 +1,6 @@
 import './App.css';
-import Face from './componens/Face/Face';
+import Face from './componens/Index/Face/Face';
+import Basket from './componens/ShoppingCart/Basket/Basket';
 
 function App() {
   return (
@@ -7,6 +8,10 @@ function App() {
       
         <Face />
       
+
+      <div>
+        <Basket />
+      </div>
     </div>
   );
 }

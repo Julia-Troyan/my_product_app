@@ -1,8 +1,8 @@
 import React from "react";
-import "./style_body.scss";
-import Product from "../Product/Product";
 import InfoContent from "../InfoContent/InfoContent";
+import Product from "../Product/Product";
 import products from "../Product/products";
+import "./style_body.scss";
 
 const Body = () => {
   return (

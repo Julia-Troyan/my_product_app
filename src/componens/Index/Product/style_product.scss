@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Lato", sans-serif;
-  src: url(../Lato/Lato-Light.ttf);
+  src: url(../InfoContent/Lato/Lato-Light.ttf);
 }
 * {
   margin: 0 auto;
@@ -117,4 +117,32 @@
   font-size: 16px;
   color: #f16d7f;
   margin: 16px 0 0 0;
+}
+.product__add {
+  position: absolute;
+  top: 188px;
+  left: 111px;
+  border: 1px solid #fff;
+  width: 139px;
+  height: 44px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 11px;
+  color: #FFFFFF;
+}
+.product__add:hover {
+  border: 1px solid $countBackground;
+  color: $countBackground;
+}
+.product__add:hover svg path {
+  fill: $countBackground;
 }
