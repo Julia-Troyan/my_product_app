@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Lato", sans-serif;
-  src: url(../InfoContent/Lato/Lato-Light.ttf);
+  src: url(../InfoContent/Lato/Lato-Regular.ttf);
 }
 * {
   margin: 0 auto;
@@ -11,64 +11,58 @@
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-.menu-active {
+.menu-container {
+  width: 1600px;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+    &__content {
+      padding: 32px 0 0 32px;
   position: absolute;
   width: 232px;
-  height: 634px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  height: auto;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-  top: 75px;
-  right: 580px;
   z-index: 5;
-  &__h1 {
-    font-weight: bold;
-    color: rgba(0, 0, 0, 1);
-    margin-bottom: 24px;
-    font-family: Lato;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 17px;
-    letter-spacing: 0%;
-    text-align: left;
+    &_allMenu {
+      
+     &_btn{
+      text-align: right;
+      width: 90%;
+      border: none;
+      background: none;
+      color: red;
+      font-size: 14px;
+      font-weight: 800;
+     }
+     &_h1 {
+      font-size: 14px;
+      font-weight: 700;
+     line-height: 18px;
+     color: $colorForText;
+     }
+     &_select {
+      
+      &_h2{
+      margin-top: 24px;
+
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 400;
+      color: $countBackground;
+     }
+     &_paragraf {
+      align-items: flex-start !important;
+      color: #6F6E6E;
+      &_p {
+        padding: 10px;
+      }
+     }
+    }
   }
-}
-.menu-active button {
-  border: none;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  color: red;
-  font-weight: 900;
-}
-.hidden {
-  display: none;
-}
-.headline {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  font-weight: regular;
-  &__p {
-    display: flex;
+
   }
-}
-.headline h2 {
-  color: $countBackground;
-  font-weight: regular;
-  font-size: 14px;
   
-}
-.headline p {
-  font-weight: regular;
-  font-size: 14px;
-  color: $colorForParagraph;
+  
+
 }

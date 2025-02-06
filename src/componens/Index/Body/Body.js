@@ -54,9 +54,9 @@ const Body = () => {
         </div>
       </section>
       <section className="mainContent">
-        <div className="header">
-          <h2>Featured Items</h2>
-          <p>Shop for items based on what we featured in this week</p>
+        <div className="mainContent__header">
+          <h2 className="mainContent__header_h2">Featured Items</h2>
+          <p className="mainContent__header_p">Shop for items based on what we featured in this week</p>
         </div>
         <div className="cards">
           {products.map((product) => (

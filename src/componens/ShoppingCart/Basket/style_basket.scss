@@ -23,138 +23,226 @@ body, html {
     width: $widthSite;
   }
 }
-.filter-sort {
-  padding-top: 39px;
-  box-sizing: border-box;
-  display: flex;
-  position: relative;
-  height: 132px;
-  display: flex;
-  gap: $gapGrid;
-}
-.filter {
-  padding-top: 13px;
-  width: 360px;
-  box-sizing: border-box;
-  background-color: #fff;
-  position: relative;
-  z-index: 1;
-  &__content {
-    background-color: #fff;
-    padding-top: 0;
-    padding-right: 16px;
-    padding-bottom: 16px;
-    padding-left: 16px;
-  }
-  &[open] {
-    background: #fff;
-    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-  }
-  &[open] .filter__heading, path {
-    color: $colorSelectSite;
-  }
-  &[open] path {
-    fill: $colorSelectSite;
-  }
-  &__summary {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    padding-left: 16px;
-  }
-  &__summary svg {
-    width: 15px;
-    height: 10px;
-   }
- 
-  &__item {
-    margin-top: 16px;
 
-  }
-  &__heading {
-    cursor: pointer;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    color:$colorText;
-  }
-  &__head {
-    cursor: pointer;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: $colorText;
-    padding: 8px 11px 11px 11px;
-    border-bottom: 1px solid #EBEBEB;
-    border-left: 5px solid $colorSelectSite;
-  }
-  &__item[open] .filter__head {
-    color: $colorSelectSite;
-  }
-&__link-box {
+.product-box {
+
+ display: flex;
+ margin-top: 96px;
+ justify-content: center;
+ align-items: flex-start;
+ flex-wrap: nowrap;
+ gap: 40px;
+ }
+ .products{
+   display: grid;
+    grid-auto-flow: row;
+   gap: 30px;
+ }
+ .product{
+  width: 652px;
+  height: 306px;
+  box-shadow: 17px 19px 24px 0 rgba(0, 0, 0, 0.13);
+  background: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: 1fr;
+ 
+   &__content{
+     display: flex;
+     flex-direction: column;
+     gap: 42px;
+   }
+   &__cross {
+     border: none;
+     background: none;
+     cursor: pointer;
+   }
+   &__cross svg path {
+     fill: #636363;
+     transition: fill 0.3s ease;
+   }
+   &__cross:hover svg path {
+     fill: $colorSelectSite;
+   }
+   &__link{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+   }
+   &__link a h1
+   {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     justify-content: space-between;
+     align-items: center;
+     font-weight: 400;
+     font-size: 24px;
+     color: $backBlock;
+     hyphens: auto;
+     word-wrap: break-word;
+   }
+   &__price {
+     font-weight: 400;
+     font-size: 22px;
+     color: $colorText;
+   }
+   &__discount {
+     font-weight: 400;
+     font-size: 22px;
+     color: #F16D7F;
+   }
+   &__count{
+     width: 44px;
+     height: 25px;
+     margin-left: 24px;
+     border: 1px solid #EAEAEA;
+     font-weight: 400;
+     font-size: 18px;
+     line-height: 22px;
+     color: $colorText;
+     text-align: center;
+   }
+   &__buttons{
+     margin-top: 72px;
+     display: flex;
+     gap: 10px;
+     justify-content: space-between;
+   }
+   &__but{
+     width: 235px;
+     height: 50px;
+     background-color: $backContent;
+     font-weight: 300;
+     font-size: 14px;
+     color: $colorName;
+     border: 1px solid #A4A4A4;
+     cursor: pointer;
+   }&__but:hover {
+     background-color: $colorSelectSite;
+     color: #FFFFFF;
+   }
+ }
+ .adress {
   display: flex;
   flex-direction: column;
-  padding: 24px 16px;
-  gap: 11px;
-}
- &__link {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-  color: $colorText;
-  &:hover {
-    color: $colorSelectSite;
-  }
- }
-}
-.sort {
-  padding-top: 12px;
-  display: flex;
-  gap: 18px;
-
-  &__details {
-    position: relative;
-  }
-
-  &__summary {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-  }
-  &__check {
-    display: flex;
-    gap: 9px;
-     font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: $colorText;
-  }
-  &__heading {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: $colorText;
-  }
-  &__box {
+  justify-content: center;
+  margin-left: 128px;
+  &__content {
+    
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    background: #ffff;
-    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-    padding: 7px 30px 11px 9px;
-    position: absolute;
-    left: -12px;
-    top: 20px;
+    gap: 20px;
   }
+  &__head h2{
+    font-weight: 300;
+    font-size: 16px;
+    color: $backBlock;
+    margin-bottom: 20px;
+    
+  }
+ &__input{
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+ }
+  &__text{
+  width: 360px;
+  height: 45px;
+  font-weight: 300;
+  font-size: 13px;
+  color: colorName;
+  padding-left: 17px;
+  border: 1px solid $colorText;
+  }
+  &__text::placeholder{
+    color: $colorName;
+  }
+  &__text:focus::placeholder{
+    color: $colorText;
+  }
+  &__button{
+   width: 101px;
+  height: 35px;
+  border: 1px solid #A4A4A4;
+  font-weight: 300;
+  font-size: 11px;
+  color: $colorText;
+  background-color: $backContent;
+  cursor: pointer;
+  }
+  &__button:hover{
+    background-color: $colorSelectSite;
+    color: #FFFFFF;
+  }
+  &__total{
+    margin-top: 57px;
+    width: 360px;
+    height: 214px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    background-color: $backContent;
+  }
+  &__all{
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__sub{
+    border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    padding: 0px 10px 20px;
+    gap:12px;
+    
+    flex-wrap: nowrap;
+  }
+  &__span1{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 400;
+    font-size: 11px;
+    color: $colorText;
   
+  }
+  &__span{
+    margin-left: 30px;
+    font-weight: 400;
+    font-size: 11px;
+    color: $colorText;
+  }
+  &__span2{
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 300;
+    font-size: 16px;
+    color: $backBlock;
+  }
+  &__span3{
+    margin-left: 30px;
+    font-weight: 700;
+    color: $colorSelectSite;
+  }
+  &__checkout{
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 14px;
+    color: $colorName;
+    align-items: center;
+    width: 273px;
+    height: 50px;
+    border: 1px solid #A4A4A4;
+    background-color: $backContent;
+  }
+  &__checkout:hover{
+    background-color: $colorSelectSite;
+    color: #fff;
+  }
 }
-
-
 

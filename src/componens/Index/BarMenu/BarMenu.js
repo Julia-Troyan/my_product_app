@@ -1,37 +1,45 @@
-import React, { useState } from "react";
+import React from "react";
 import "./style_bar.scss";
 
 const BarMenu = ({ closeMenu }) => {
   return (
-    <div className="menu-active">
-        <h1 className="menu-active__h1">MENU</h1>
-        <button className="menu-close" onClick={closeMenu}>X</button>
-        <div className="headline"><h2>MAN</h2>
-          <div className="headline__p">
-          <p>Accessories</p>
-          <p>Bags</p>
-          <p>Denim</p>
-          <p>T-Shirts</p>
-          </div>
-        </div>
-        <div className="headline"><h2>WOMAN</h2>
-          <div className="headline__p">
-          <p>Accessories</p>
-          <p>Jackets & Coats</p>
-          <p>Polos</p>
-          <p>T-Shirts</p>
-          <p>Shirts</p>
-          </div>
-        </div>
-        <div className="headline"><h2>KIDS</h2>
-          <div className="headline__p">
-          <p>Accessories</p>
-          <p>Jackets & Coats</p>
-          <p>Polos</p>
-          <p>T-Shirts</p>
-          <p>Shirts</p>
-          <p>Bags</p>
-          </div>
+    <div className="menu-container">
+        <div className="menu-container__content">
+          <div className="menu-container__content_allMenu"><button onClick={closeMenu} className="menu-container__content_allMenu_btn">X</button>
+            <h1 className="menu-container__content_allMenu_h1">MENU</h1>
+            
+            <div className="menu-container__content_allMenu_select">
+              <h2 className="menu-container__content_allMenu_select_h2">MAN</h2>
+              <div className="menu-container__content_allMenu_select_paragraf">
+                <p className="menu-container__content_allMenu_select_paragraf_p">Accessories</p>
+                <p className="menu-container__content_allMenu_select_paragraf_p">Bags</p>
+                <p className="menu-container__content_allMenu_select_paragraf_p">Denim</p>
+                <p className="menu-container__content_allMenu_select_paragraf_p">T-Shirts</p>
+              </div>
+            </div>
+            <div className="menu-container__content_allMenu_select">
+              <h2 className="menu-container__content_allMenu_select_h2">WOMAN</h2>
+              <div className="menu-container__content_allMenu_select_paragraf">
+                <p className="menu-container__content_allMenu_select_paragraf_p">Accessories</p>
+                <p className="menu-container__content_allMenu_select_paragraf_p">Jackets & Coats</p>
+                <p className="menu-container__content_allMenu_select_paragraf_p">Polos</p>
+                <p className="menu-container__content_allMenu_select_paragraf_p">T-Shirts</p>
+                <p className="menu-container__content_allMenu_select_paragraf_p">Shirts</p>
+              </div>
+            </div>
+          <div className="menu-container__content_allMenu_select">
+              <h2 className="menu-container__content_allMenu_select_h2">KIDS</h2>
+              <div className="menu-container__content_allMenu_select_paragraf">
+                <p className="menu-container__content_allMenu_select_paragraf_p">Accessories</p>
+                <p className="menu-container__content_allMenu_select_paragraf_p">Jackets & Coats</p>
+                <p className="menu-container__content_allMenu_select_paragraf_p">Polos</p>
+                <p className="menu-container__content_allMenu_select_paragraf_p">T-Shirts</p>
+                <p className="menu-container__content_allMenu_select_paragraf_p">Shirts</p>
+                <p className="menu-container__content_allMenu_select_paragraf_p">Bags</p>
+                </div>
+              </div>
+            </div>
+
         </div>
     </div>
          
