@@ -1,4 +1,4 @@
-import "./style_bread.scss"
+import "./style_bread.scss";
 
 
 

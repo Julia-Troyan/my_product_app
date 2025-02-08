@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import InfoContent from "../InfoContent/InfoContent";
 import Product from "../Product/Product";
 import products from "../Product/products";
@@ -71,12 +72,12 @@ const Body = () => {
           ))}
         </div>
       </section>
-      <div className="knopka">
-        <a href="#">
+            <div className="knopka">
+        <Link to="/products">
           <button className="knopka-text">Browse All Products</button>
-        </a>
+        </Link>
       </div>
-      <div>
+         <div>
         <InfoContent />
       </div>
     </div>

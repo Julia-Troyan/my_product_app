@@ -5,8 +5,6 @@ import EmailContent from "../EmailContent/EmailContent";
 import Footer from "../Footer/Footer";
 
 
-
-
 const Face = () => {
 return (
 <div>

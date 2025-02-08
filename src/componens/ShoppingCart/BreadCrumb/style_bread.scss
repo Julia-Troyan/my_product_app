@@ -23,6 +23,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: $widthSite;
   &__heading {
   font-style: normal;
   font-weight: 400;

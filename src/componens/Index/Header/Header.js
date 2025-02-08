@@ -27,7 +27,7 @@ return (
         </div>
         <div className="topNav-right">
           <a href="#"><button onClick={openMenu} className="btn_a1 burger"><MenuIcon /></button></a>
-          <a href="#"><button className="btn_a1"><UserIcon /></button></a>
+          <Link to="/auth"><button className="btn_a1"><UserIcon /></button></Link>
           <Link to="/basket">
   <button className="btn_a1"><TruckIcon /><span className="header__count">5</span></button></Link>
         </div>
