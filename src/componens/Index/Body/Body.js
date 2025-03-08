@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import InfoContent from "../InfoContent/InfoContent";
 import Product from "../Product/Product";
@@ -6,6 +6,15 @@ import products from "../Product/products";
 import "./style_body.scss";
 
 const Body = () => {
+
+  const [visibleCount, setVisibleCount] = useState(6); 
+  const handleShowMore = () => {
+    setVisibleCount((prevCount) => prevCount + 6);
+  };
+  const [cartItems, setCartItems] = useState([]);
+  const handleAddToCart = (product) => {
+    setCartItems((prevItems) => [...prevItems, product]);
+  };
   return (
     <div>
       <section className="banner-section">
@@ -60,17 +69,19 @@ const Body = () => {
           <p className="mainContent__header_p">Shop for items based on what we featured in this week</p>
         </div>
         <div className="cards">
-          {products.map((product) => (
+        {products.slice(0, visibleCount).map((product) => (
             <Product
-              key={product.id}
-              imageUrl={product.imageUrl}
-              shadowImageUrl={product.shadowImageUrl}
-              price={product.price}
-              title={product.title}
-              description={product.description}
-            />
+            id={product.id}
+            imageUrl={product.imageUrl}
+            shadowImageUrl={product.shadowImageUrl}
+            price={product.price}
+            title={product.title}
+            description={product.description}
+            onAddToCart={handleAddToCart}
+          />
           ))}
         </div>
+        
       </section>
             <div className="knopka">
         <Link to="/products">

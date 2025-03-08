@@ -5,6 +5,7 @@ import EmailContent from "../EmailContent/EmailContent";
 import Footer from "../Footer/Footer";
 
 
+
 const Face = () => {
 return (
 <div>
@@ -12,6 +13,7 @@ return (
   <div><Body /></div>
   <div><EmailContent /></div>
   <div><Footer /></div>
+
 </div>
 );
 };

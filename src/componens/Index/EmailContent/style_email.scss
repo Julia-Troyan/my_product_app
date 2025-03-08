@@ -129,6 +129,16 @@ body, html {
   font-size: 14px;
   font-weight: regular;
 }
+.form input:focus {
+  outline: none;
+  background: none;
+}
+:-internal-autofill-selected {
+  appearance: none !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  color: inherit !important;
+}
 
 .form button {
   border-radius: 0 20px 20px 0;

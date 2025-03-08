@@ -84,9 +84,16 @@
   margin-right: 8px;
 }
 
-// .card_min:hover .shadow {
-//   opacity: 1;
-// }
+.add-to-cart-message {
+  position: absolute;
+  display: flex;
+  top: 20px;
+  width: 300px;
+  color: #087a4b;
+  text-shadow: 2px 2px 3px rgba(236, 222, 222, 0.5);
+  font-size: 24px;
+  z-index: 100;
+}
 
 .text {
   width: 100%;
