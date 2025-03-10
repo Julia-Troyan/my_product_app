@@ -5,15 +5,20 @@ import Product from "../Product/Product";
 import products from "../Product/products";
 import "./style_body.scss";
 
-const Body = () => {
+
+const Body = ({ cartItems, setCartItems }) => {
 
   const [visibleCount, setVisibleCount] = useState(6); 
   const handleShowMore = () => {
     setVisibleCount((prevCount) => prevCount + 6);
   };
-  const [cartItems, setCartItems] = useState([]);
   const handleAddToCart = (product) => {
-    setCartItems((prevItems) => [...prevItems, product]);
+    setCartItems((prevItems) => {
+      if (!prevItems.some((item) => item.id === product.id)) {
+        return [...prevItems, product];
+      }
+      return prevItems;
+    });
   };
   return (
     <div>
@@ -71,14 +76,15 @@ const Body = () => {
         <div className="cards">
         {products.slice(0, visibleCount).map((product) => (
             <Product
-            id={product.id}
-            imageUrl={product.imageUrl}
-            shadowImageUrl={product.shadowImageUrl}
-            price={product.price}
-            title={product.title}
-            description={product.description}
-            onAddToCart={handleAddToCart}
-          />
+              key={product.id}
+              id={product.id}
+              imageUrl={product.imageUrl}
+              shadowImageUrl={product.shadowImageUrl}
+              price={product.price}
+              title={product.title}
+              description={product.description}
+              onAddToCart={() => handleAddToCart(product)}
+            />
           ))}
         </div>
         

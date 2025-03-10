@@ -5,14 +5,15 @@ import Face from './componens/Index/Face/Face';
 import Basket from './componens/ShoppingCart/Basket/Basket';
 import ProductAll from "./componens/ShoppingCart/ProductAll/ProductAll";
 import Registration from "./componens/Index/Registration/Registration";
-
+import Body from "./componens/Index/Body/Body";
 function App() {
-  const [cartItems, setCartItems] = useState([]); // ✅ Добавляем состояние корзины
+  const [cartItems, setCartItems] = useState([]);
 
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Face />} />
+        <Route path="/body" element={<Body cartItems={cartItems} setCartItems={setCartItems} />} />
+        <Route path="/" element={<Face cartItems={cartItems} setCartItems={setCartItems}/>} />
         <Route path="/basket" element={<Basket cartItems={cartItems} setCartItems={setCartItems} />} />
         <Route path="/products" element={<ProductAll cartItems={cartItems} setCartItems={setCartItems} />} />
         <Route path="/auth" element={<Registration />} />
