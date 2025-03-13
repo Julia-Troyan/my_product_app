@@ -16,9 +16,6 @@
 
 .medContent {
   display: flex;
-  // display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  // grid-template-rows: auto;
   gap: 453px;
   justify-items: center;
   align-items: center;
@@ -42,15 +39,15 @@
 
 .minContent {
   max-width: $widthSiteProducts;
-  height: 600px;
+
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  height: 600px;
+
   background-color: #ffffff;
   margin-top: -60px;
   box-sizing: border-box;
-  margin-bottom: 900px;
+  margin-bottom: 50px;
 }
 
 .minContent__content {
@@ -85,6 +82,11 @@
   align-items: center;
   text-align: center;
   margin-bottom: 32px;
+}
+.minContent__content_block {
+  box-sizing: border-box;
+  border-bottom: 3px solid $countBackground;
+  width: 63px;
 }
 
 .minContent__content h1 {
@@ -190,4 +192,74 @@
   font-size: 16px;
   color: $countBackground;
   margin: 16px 0 0 0;
+}
+
+/* Стиль для планшета */
+@media (min-width: 768px) and (max-width: 1600px) {
+  .medContent {
+    gap: 24px;
+    max-width: 768px;
+  }
+  
+  .minContent {
+    max-width: 768px;
+  }
+  .cardds {
+    gap: 16px;
+  }
+  .cardds > :last-child {
+    display: none;
+  }
+}
+
+/* Стиль для сотового телефона */
+@media (min-width: 375px) and (max-width: 768px) {
+  .medContent {
+    gap: 0;
+    max-width: 375px;
+    height: 624px;
+    &__switch {
+      display: flex;
+      flex-direction: column;
+
+      &_img {
+        width: 323px;
+        height: 404px;
+     }
+    }
+  }
+  
+  .minContent {
+    max-width: 375px;
+  }
+    .minContent__content {
+    padding: 64px 25px;
+  }
+  .minContent__content h3 {
+    font-size: 14px;
+  }
+  .minContent__content h2 {
+    font-size: 18px;
+    margin-bottom: 31px;
+  }
+   .minContent__content p {
+    height: 14px;
+  }
+  
+  .cost {
+    width: 175px;
+    padding: 0;
+    margin-top: 70px;
+}
+.cost h1{
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(241, 109, 127);
+  margin-bottom: 34px;
+}
+  .cardds {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
 }

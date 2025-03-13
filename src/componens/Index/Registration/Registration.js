@@ -14,7 +14,7 @@ const Registration = () =>{
       <div>
       <BreadCrumb title="REGISTRATION" showNavigation={false} />
       </div>
-      <div className="registration-box center">
+      <div className="registration-box">
        <div className="registrations">
         <div className="registration">
         <h3 className="registration__head">Your Name</h3>

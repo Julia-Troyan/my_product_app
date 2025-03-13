@@ -16,13 +16,13 @@
   width: $widthSite;
   gap: 128px;
   margin-bottom: 196px;
- 
+
 }
 
 .registrations {
   display: grid;
   grid-auto-flow: row;
- 
+
 }
 
 .registration {
@@ -110,12 +110,14 @@
     border: 1px solid $colorText;
 
   }
+
   &__text:focus {
     outline: none;
   }
+
   &__text:focus::placeholder {
     color: $colorText;
-    
+
   }
 
   &__checkbox input[type="checkbox"] {
@@ -201,7 +203,9 @@
     flex-direction: column;
     gap: 20px;
   }
-
+  &__head {
+    margin: 0;
+  }
   &__head h1 {
     font-weight: 400;
     font-size: 24px;
@@ -237,6 +241,107 @@
     background-size: contain;
     background-repeat: no-repeat;
     margin-right: 22px;
+  }
+
+}
+
+/* Стиль для планшета */
+@media (min-width: 768px) and (max-width: 1140px) {
+  .registration-box {
+    gap: 22px;
+    width: 768px;
+
+  }
+  .registrations {
+    display: grid;
+    grid-auto-flow: row;
+
+  }
+  .registration {
+    gap: 20px;
+
+    &__head {
+      font-weight: 300;
+      font-size: 16px;
+      color: $backBlock;
+      margin: 0;
+    }
+  }
+
+  .loyalty {
+  width: 354px;
+  margin: 0;
+    &__head{
+      font-weight: 400;
+      font-size: 16px;
+    }
+    &__context {
+      font-size: 16px
+    }
+    &__block {
+      margin: 0
+    }
+    &__ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    &__li {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Стиль для сотового телефона */
+@media (min-width: 375px) and (max-width: 768px) {
+  .registration-box {
+   display: flex;
+   flex-direction: column;
+   gap: 390px;
+   width: 359px;
+   margin-bottom: 96px;
+  }
+  .registrations {
+    display: grid;
+    grid-auto-flow: row;
+  }
+  .registration {
+    gap: 20px;
+
+    &__head {
+      font-weight: 300;
+      font-size: 16px;
+      color: $backBlock;
+      margin: 0;
+    }
+  }
+
+  .loyalty {
+  width: 354px;
+  margin: 0;
+    &__head{
+      font-weight: 400;
+      font-size: 16px;
+    }
+    &__context {
+      font-size: 16px
+    }
+    &__block {
+      margin: 0
+    }
+    &__ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    &__li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      font-weight: 300;
+      font-size: 16px;
+      color: $colorName;
+    }
   }
 
 }

@@ -83,7 +83,7 @@ const Basket = ({ cartItems, setCartItems }) => {
         <Header />
         <BreadCrumb title="SHOPPING CART" showNavigation={false} />
       </div>
-      <div className="product-box center">
+      <div className="product-box">
         <div className="product-box_prod">
           <div className='product-box_prod_carts'>
             {currentItems.length > 0 ? (
