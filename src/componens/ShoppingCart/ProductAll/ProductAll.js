@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Product from '../../Index/Product/Product';
 import Header from './../../Index/Header/Header';
 import BreadCrumb from '../BreadCrumb/BreadCrumb';
@@ -11,15 +11,33 @@ import EmailContent from './../../Index/EmailContent/EmailContent';
 import Footer from '../../Index/Footer/Footer';
 import Basket from '../Basket/Basket';
 
-const ITEMS_PER_PAGE = 9;
 
 const ProductAll = ({ cartItems, setCartItems }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const indexOfFirstItem = (currentPage - 1) * ITEMS_PER_PAGE;
-  const indexOfLastItem = currentPage * ITEMS_PER_PAGE;
+  const [itemsPerPage, setItemsPerPage] = useState(9);
+  const [selectedSizes, setSelectedSizes] = useState([]);
 
-  const [selectedSizes, setSelectedSizes] = useState([]);// чтобы отследить выбранный размер
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1600) {
+        setItemsPerPage(9);
+      } else if (window.innerWidth >= 768) {
+        setItemsPerPage(8);
+        setItemsPerPage(3);
+      }
+    };
+
+    handleResize();
+
+   
+    window.addEventListener("resize", handleResize);
+
+   
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  const indexOfFirstItem = (currentPage - 1) * itemsPerPage;
+  const indexOfLastItem = currentPage * itemsPerPage;
 
   const handleNextPage = () => {
     if (indexOfLastItem < products.length) {
@@ -34,9 +52,7 @@ const ProductAll = ({ cartItems, setCartItems }) => {
   };
 
   const handleAddToCart = (product) => {
-    // Добавляем размер товара в объект
-    const productWithSize = { ...product, size: selectedSizes[0] };  // Предположим, что размер выбран один
-    setCartItems((prevItems) => {
+      const productWithSize = { ...product, size: selectedSizes[0] };    setCartItems((prevItems) => {
       if (!prevItems.some((item) => item.id === product.id && item.size === productWithSize.size)) {
         return [...prevItems, productWithSize];
       }
@@ -47,10 +63,8 @@ const ProductAll = ({ cartItems, setCartItems }) => {
   const handleSizeChange = (size) => {
     setSelectedSizes((prevSizes) => {
       if (prevSizes.includes(size)) {
-        // Если размер уже выбран, убираем его
         return prevSizes.filter((s) => s !== size);
       } else {
-        // Если размер еще не выбран, добавляем его
         return [...prevSizes, size];
       }
     });
@@ -64,11 +78,11 @@ const ProductAll = ({ cartItems, setCartItems }) => {
   return (
     <div>
       <div><Header /></div>
-      <div><BreadCrumb /></div>
-      <div className="filter-sort center">
+      <BreadCrumb title="NEW ARRIVALS" showNavigation={true} />
+      <div className="filter-sort">
         <details className="filter">
           <summary className="filter__summary">
-            <span className="filter__heading">FILTER <FilterIcon /></span>
+            <span className="filter__heading"><span className='icon'>FILTER </span> <FilterIcon /></span>
           </summary>
           <div className="filter__content">
             <details open className="filter__item">
@@ -185,6 +199,7 @@ const ProductAll = ({ cartItems, setCartItems }) => {
               onAddToCart={handleAddToCart}
             />
           ))}
+          
         </div>
       </section>
       <div class="slaider">

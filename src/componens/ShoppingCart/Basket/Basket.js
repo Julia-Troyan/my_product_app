@@ -81,7 +81,7 @@ const Basket = ({ cartItems, setCartItems }) => {
     <div className="basket-container">
       <div className="basket-container__content">
         <Header />
-        <BreadCrumb />
+        <BreadCrumb title="SHOPPING CART" showNavigation={false} />
       </div>
       <div className="product-box center">
         <div className="product-box_prod">

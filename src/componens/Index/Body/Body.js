@@ -4,7 +4,7 @@ import InfoContent from "../InfoContent/InfoContent";
 import Product from "../Product/Product";
 import products from "../Product/products";
 import "./style_body.scss";
-
+import bannerImage from "./img/banner.png";
 
 const Body = ({ cartItems, setCartItems }) => {
 
@@ -23,14 +23,16 @@ const Body = ({ cartItems, setCartItems }) => {
   return (
     <div>
       <section className="banner-section">
-        <div className="banner-wrapper"></div>
+      <div className="banner-wrapper">
+        <img src={bannerImage} alt="Banner" class="banner-image" />
+      </div>
         <div className="banner-text">
           <div className="banner-title">
             <div className="banner__title__wrap">
               <h1 className="banner__title1">THE BRAND</h1>
-              <h2 className="banner__title2">
+              <h3 className="banner__title2">
                 OF LUXURIOUS <span>FASHION</span>
-              </h2>
+              </h3>
             </div>
           </div>
         </div>

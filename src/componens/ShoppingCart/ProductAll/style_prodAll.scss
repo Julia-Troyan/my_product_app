@@ -211,3 +211,46 @@ summary::-webkit-details-marker {
 .number-counter:hover{
   border: 2px solid blue;
 }
+
+/* Стиль для планшета */
+@media (min-width:768px) and (max-width:1140px) {
+  .filter-sort {
+    width: 768px;
+    height: 132px;
+  }
+  
+  .cardAll {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Стиль для сотового телефона */
+  @media (min-width: 375px) and (max-width: 768px) {
+    .filter-sort {
+      width: 375px;
+      height: 132px;
+    }
+    
+    .cardAll {
+      display: grid;
+      grid-template-columns: repeat(1, 8fr);
+      gap: 16px;
+    }
+   .icon {
+    display: none;
+   }
+   .sort {
+    gap: 23px;
+  
+    &__details {
+        
+    &_heading {
+
+      font-size: 12px;
+    }
+  }
+  }
+}

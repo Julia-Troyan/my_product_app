@@ -1,4 +1,4 @@
-* {
+ * {
   margin: 0 auto;
   padding: 0;
   text-decoration: none;
@@ -53,3 +53,30 @@ body, html {
   font-size: 14px;
   font-weight: lighter;
 }
+
+/* Стиль для планшета */
+@media (min-width: 768px) and (max-width: 1600px) {
+  .infoContent {
+    max-width: 768px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 46px 204px;
+  }
+
+
+}
+
+
+/* Стиль для сотового телефона */
+@media (max-width: 768px) {
+   .infoContent {
+    max-width: 375px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 14px;
+  }
+}
+

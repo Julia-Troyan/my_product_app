@@ -4,6 +4,7 @@
   font-family: "Lato", sans-serif;
   src: url(../InfoContent/Lato/Lato-Light.ttf);
 }
+
 * {
   margin: 0 auto;
   padding: 0;
@@ -11,7 +12,9 @@
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
 }
-body, html {
+
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -27,11 +30,13 @@ body, html {
   background: rgba(34, 34, 36, 1);
   align-items: center
 }
+
 .end p {
   font-size: 16px;
   font-weight: regular;
   color: rgba(251, 251, 251, 1);
 }
+
 .btn-nav {
   display: flex;
   flex-direction: row;
@@ -39,6 +44,7 @@ body, html {
   align-items: center;
   gap: 8px;
 }
+
 .btn-foot {
   width: 32px;
   height: 32px;
@@ -46,9 +52,38 @@ body, html {
   cursor: pointer;
   border: none;
 }
+
 .btn-foot:hover {
   background-color: rgba(241, 109, 127, 1);
 }
-.btn-foot:hover svg path{
+
+.btn-foot:hover svg path {
   fill: rgb(247, 245, 245);
+}
+
+/* Стиль для планшета */
+@media (min-width: 768px) and (max-width: 1600px) {
+  .end {
+    max-width: 768px;
+    padding: 30px;
+    gap: 305px;
+  }
+
+}
+
+/* Стиль для сотового телефона */
+@media (max-width: 768px) {
+  .end {
+    max-width: 375px;
+    height: 143px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .btn-nav {
+    margin-top: 43px;
+  }
 }

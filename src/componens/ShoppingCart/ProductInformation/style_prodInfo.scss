@@ -5,6 +5,7 @@
   font-family: "Lato", sans-serif;
   src: url(../../Index/InfoContent/Lato/Lato-Black.ttf);
 }
+
 * {
   margin: 0 auto;
   padding: 0;
@@ -13,29 +14,33 @@
   font-family: "Lato", sans-serif;
 }
 
-.mediumContent {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
+.medContent {
+  display: flex;
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: auto;
   gap: 453px;
   justify-items: center;
   align-items: center;
   width: 100%;
   max-width: $widthSite;
   background-color: rgba(247, 247, 247, 1);
-  margin: 0 auto;
+  // margin: 0 auto;
   position: relative;
   z-index: 1;
+
   &__switch button {
-  border: none;
-  cursor: pointer;
-  
+    border: none;
+    cursor: pointer;
+
   }
+
   &__switch svg path:hover {
-  fill: $countBackground;
+    fill: $countBackground;
   }
 }
-.mainContent {
+
+.minContent {
   max-width: $widthSiteProducts;
   height: 600px;
   margin: 0 auto;
@@ -44,29 +49,35 @@
   height: 600px;
   background-color: #ffffff;
   margin-top: -60px;
-  box-sizing: border-box ;
+  box-sizing: border-box;
+  margin-bottom: 900px;
 }
-.mainContent__content {
+
+.minContent__content {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 64px;
-    border: 1px solid rgba(234, 234, 234, 1);
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px;
+  border: 1px solid rgba(234, 234, 234, 1);
+  margin-bottom: 110px;
 }
-.mainContent__content h3 {
-    color: $countBackground;
-    font-weight: 400;
-    font-size: 17px;
-    margin-bottom: 12px;
+
+.minContent__content h3 {
+  color: $countBackground;
+  font-weight: 400;
+  font-size: 17px;
+  margin-bottom: 12px;
 }
-.mainContent__content h2 {
+
+.minContent__content h2 {
   color: $colorForParagraph;
   font-weight: 400;
   font-size: 22px;
   margin-top: 12px;
   margin-bottom: 48px;
 }
-.mainContent__content p {
+
+.minContent__content p {
   color: $colorForParagraph;
   font-weight: 400;
   max-width: 555px;
@@ -75,13 +86,15 @@
   text-align: center;
   margin-bottom: 32px;
 }
-.mainContent__content h1 {
+
+.minContent__content h1 {
   font-size: 24px;
   font-weight: 400;
   color: $countBackground;
   margin-top: 32px;
   margin-bottom: 64px;
 }
+
 .button-line {
   display: flex;
   justify-content: center;
@@ -90,19 +103,24 @@
   margin-bottom: 48px;
   margin-top: 48px;
 }
+
 .line {
   background-color: #ffffff;
   border: none;
 }
-.line a{
+
+.line a {
   color: $colorForParagraph;
 }
+
 .line svg {
- margin-left: 9px;
+  margin-left: 9px;
 }
+
 .line svg {
   fill: $countBackground;
 }
+
 .basket {
   width: 212px;
   height: 48px;
@@ -115,11 +133,13 @@
   color: $countBackground;
   font-size: 16px;
   font-weight: 400;
+
   &__img {
-  margin: 0;
+    margin: 0;
+  }
 }
-}
-.cost{
+
+.cost {
   margin-bottom: 64px;
   box-sizing: border-box;
   border: none;
@@ -128,16 +148,15 @@
   width: 642px;
   cursor: pointer;
 }
-.cards {
+
+.cardds {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-bottom: 128px;
-  margin-top: 128px;
 }
-.card {
+.cardd {
   max-width: 360px;
   height: 581px;
 &__text {
@@ -162,138 +181,11 @@
   margin: 16px 0 0 0;
 }
 }
-.mainContent {
-  max-width: $widthSiteProducts;
-  height: 600px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 2;
-  height: 600px;
-  background-color: #ffffff;
-  margin-top: -60px;
-  box-sizing: border-box ;
-}
-.mainContent__content {
-  display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 64px;
-    border: 1px solid rgba(234, 234, 234, 1);
-}
-.mainContent__content h3 {
-    color: $countBackground;
-    font-weight: 400;
-    font-size: 17px;
-    margin-bottom: 12px;
-}
-.mainContent__content h2 {
-  color: $colorForParagraph;
-  font-weight: 400;
-  font-size: 22px;
-  margin-top: 12px;
-  margin-bottom: 48px;
-}
-.mainContent__content p {
-  color: $colorForParagraph;
-  font-weight: 400;
-  max-width: 555px;
-  height: 52px;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 32px;
-}
-.mainContent__content h1 {
-  font-size: 24px;
-  font-weight: 400;
-  color: $countBackground;
-  margin-top: 32px;
-  margin-bottom: 64px;
-}
-.button-line {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 22px;
-  margin-bottom: 48px;
-  margin-top: 48px;
-}
-.line {
-  background-color: #ffffff;
-  border: none;
-}
-.line a{
-  color: $colorForParagraph;
-}
-.line svg {
- margin-left: 9px;
-}
-.line svg {
-  fill: $countBackground;
-}
-.basket {
-  width: 212px;
-  height: 48px;
-  border: 1px solid $countBackground;
-  background-color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  color: $countBackground;
-  font-size: 16px;
-  font-weight: 400;
-  &__img {
-  margin: 0;
-}
-}
-.cost{
-  margin-bottom: 64px;
-  box-sizing: border-box;
-  border: none;
-  border-bottom: 1px solid $colorForParagraph;
-  background-color: #ffffff;
-  width: 642px;
-  cursor: pointer;
-}
-.cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  margin-bottom: 128px;
-  margin-top: 128px;
-}
-.card {
-  max-width: 360px;
-  height: 581px;
-&__text {
-  width: 100%;
-  height: 166px;
-  background: $backgroundCard;
-  margin: 0;
-  padding: 24px 16px;
-  box-sizing: border-box;
-}
-&__text a {
-  font-family: var(--font-family);
-  font-weight: 600;
-  font-size: 13px;
-  color: $colorForText;
-  margin: 0;
-}
-&__text p {
-  font-weight: 300;
-  font-size: 14px;
-  color: $colorForParagraph;
-  margin: 16px 0 0 0;
-}
-}
-.card img {
+.cardd img {
   width: 360px;
   height: 420px;
 }
-.card h4 {
+.cardd h4 {
   font-weight: 400;
   font-size: 16px;
   color: $countBackground;

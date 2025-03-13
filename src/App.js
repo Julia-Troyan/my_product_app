@@ -6,6 +6,7 @@ import Basket from './componens/ShoppingCart/Basket/Basket';
 import ProductAll from "./componens/ShoppingCart/ProductAll/ProductAll";
 import Registration from "./componens/Index/Registration/Registration";
 import Body from "./componens/Index/Body/Body";
+import ProductInformation from "./componens/ShoppingCart/ProductInformation/ProductInformation"
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/basket" element={<Basket cartItems={cartItems} setCartItems={setCartItems} />} />
         <Route path="/products" element={<ProductAll cartItems={cartItems} setCartItems={setCartItems} />} />
         <Route path="/auth" element={<Registration />} />
+        <Route path="/prodInfo" element={<ProductInformation />} />
       </Routes>
     </Router>
   );

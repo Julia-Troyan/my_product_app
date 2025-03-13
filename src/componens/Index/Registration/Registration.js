@@ -12,7 +12,7 @@ const Registration = () =>{
         <Header />
       </div>
       <div>
-        <BreadCrumb />
+      <BreadCrumb title="REGISTRATION" showNavigation={false} />
       </div>
       <div className="registration-box center">
        <div className="registrations">
